@@ -98,7 +98,8 @@
           <form>
             <input 
             type="text"
-            placeholder="+Add new record">
+            placeholder="+Add new record"
+            required>
             <br/>
             <select>
             <option value="course">Course</option>
@@ -108,14 +109,38 @@
             </select>
 
             <select>
-                <option value="course">Course</option>
-                <option value="Medicine">Medicine</option>
-                <option value="Nursing">Nursing</option>
-                <option value="Radiography">Radiography</option>
+                <option value="level">Level</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="300">300</option>
                 </select>
+
+                <select>
+                    <option value="language">Language</option>
+                    <option value="English">English</option>
+                    <option value="French">French</option>
+                    <option value="Spanish">Spanish</option>
+                    </select>
+
+                    <select>
+                        <option value="course">Start Date</option>
+                        <option value="Medicine">Medicine</option>
+                        <option value="Nursing">Nursing</option>
+                        <option value="Radiography">Radiography</option>
+                        </select>
+
+                        <input type="text">
           </form>
        </section>
+       <section>
+        <textarea>
+            comments
+        </textarea>
+       </section>
 
+       <section>
+         <Button>SEND REQUEST</Button>
+       </section>
 
 </body>
 </html>
