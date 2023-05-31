@@ -16,3 +16,7 @@ nav{
     display: flex;
     flex-direction: row;
 }
+
+.paragraph-text{
+    text-align: center;
+}
