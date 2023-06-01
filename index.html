@@ -1,146 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>TIIDELAB Signup form</title>
+  <title>Peace Sandy's Student registration Form for TIIDELAB Task</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <img src="Images\dribble logo.svg" class="img" alt="dribble logo for the registration form">
-        <h1>Student Registration Form</h1>
-    </nav>
 
-    <section class="paragraph-text"> 
-        <p>Fill out the form to apply for the training courses. You can consider Your application accepted 
-            <br/>after you receive a confirmation mail
-        </p>
-    </section>
-
-    <section>
-        <div>
-            <h1>Student Information</h1>
+    <section class="header">
+        <img src="Images\dribble logo.svg" alt="form-logo" />
+        <div class="reg-form">
+          <h1>Student Registration Form</h1>
+          <p>
+            Fill out the form to apply the training course. You can consider your
+            application accepted after you receive a conformation email.
+          </p>
         </div>
-        <form>
-            <input 
-            type="text"
-            placeholder="First Name">
+      </section>
+      
+  <form id="myForm">
+    
+    <div class="info">
+        <h3>Student Information</h3>
 
-            <input 
+        <div class="form-name">
+          <input
             type="text"
-            placeholder="Middle Name">
-
-            <input 
+            name="f-name"
+            id="First-Name"
+            placeholder="First Name"
+            required
+          />
+          <input
             type="text"
-            placeholder="Middle Name">
-
-            <br/>
-            <input 
+            name="m-name"
+            id="Middle-Name"
+            placeholder="Middle Name"
+            required
+          />
+          <input
+            type="text"
+            name="l-name"
+            id="Last-Name"
+            placeholder="Last Name"
+            required
+          />
+        </div>
+        <div class="info">
+          <input
             type="date"
-            placeholder="Date of Birth">
-
-            <input 
+            name="dob"
+            id="Date-of-Birth"
+            placeholder="Date of Birth"
+            required
+          />
+          <input
             type="text"
-            placeholder="Student ID">
-
-    </form>
-    </section>
-
-    <section>
-        <div> 
-          <h1>Address</h1>
+            name="student-id"
+            id="Student-id"
+            placeholder="Student ID"
+            required
+          />
         </div>
-        <form>
-            <input 
-            type="text"
-            placeholder="Street Address">
-            
-            <br/>
+      </div>
 
-            <input 
-            type="text"
-            placeholder="City">
+      <!-- Address -->
+      <div class="info">
+        <h3>Address</h3>
+        <input
+          type="text"
+          name="street"
+          id="Street"
+          placeholder="Street Address"
+          required
+        />
+        <input
+          type="text"
+          name="city"
+          id="City"
+          placeholder="City"
+          required
+        />
+        <input
+          type="text"
+          name="state"
+          id="State"
+          placeholder="State / Province"
+          required
+        />
+        <input
+          type="text"
+          name="country"
+          id="Country"
+          placeholder="Country"
+          required
+        />
+        <input
+          type="text"
+          name="zip-code"
+          id="Zip-Code"
+          placeholder="ZIP Code"
+          required
+        />
+      </div>
 
-            <input 
-            type="text"
-            placeholder="State/Province">
+      <!-- Contact information -->
+      <div class="info">
+        <h3>Contact Information</h3>
+        <input
+          type="email"
+          name="email"
+          id="Email"
+          placeholder="E-mail"
+          required
+        />
+        <input type="text" name="confirm-email" id="email" />
+      </div>
 
-            <br/>
-            <input 
-            type="text"
-            placeholder="Country">
-
-            <input 
-            type="text"
-            placeholder="Zip code">
-        </form>
-    </section>
-        
-       <section>
-        <div>
-            <h1>Student Information</h1>
-        </div>
-        <input 
-            type="email"
-            placeholder="Email">
-
-            <input 
-            type="text"
-            placeholder="">
-       </section>
-
-       <section>
-          <div>
-            <h1>Courses</h1>
+      <!-- Courses -->
+      <div class="info">
+        <h3 class="required">Courses</h3>
+        <div class="info-course">
+          <div class="record">
+            <input type="button" value="+ Add new record" />
           </div>
-          <form>
-            <input 
-            type="text"
-            placeholder="+Add new record"
-            required>
-            <br/>
-            <select>
-            <option value="course">Course</option>
-            <option value="Medicine">Medicine</option>
-            <option value="Nursing">Nursing</option>
-            <option value="Radiography">Radiography</option>
-            </select>
 
-            <select>
-                <option value="level">Level</option>
-                <option value="100">100</option>
-                <option value="200">200</option>
-                <option value="300">300</option>
-                </select>
+          <!-- Course Records -->
+          <div class="course-record">
+            <!-- Course -->
+            <input list="course" name="course" placeholder="Course" />
+            <datalist id="course">
+              <option value="Medicine"></option>
+              <option value="Nursing"></option>
+            </datalist>
 
-                <select>
-                    <option value="language">Language</option>
-                    <option value="English">English</option>
-                    <option value="French">French</option>
-                    <option value="Spanish">Spanish</option>
-                    </select>
+            <!-- Level -->
+            <input list="level" name="level" placeholder="Level" />
+            <datalist id="level">
+              <option value="100">100</option>
+              <option value="200">200</option>
+              <option value="300">300</option>
+              <option value="400">400</option>
+            </datalist>
 
-                    <select>
-                        <option value="course">Start Date</option>
-                        <option value="Medicine">Medicine</option>
-                        <option value="Nursing">Nursing</option>
-                        <option value="Radiography">Radiography</option>
-                        </select>
+            <!-- Language -->
+            <input list="language" name="language" placeholder="Language" />
+            <datalist id="language">
+              <option value="French"></option>
+              <option value="Spanish"></option>
+              <option value="English"></option>
+              <option value="German"></option>
+            </datalist>
 
-                        <input type="text">
-          </form>
-       </section>
-       <section>
-        <textarea>
-            comments
-        </textarea>
-       </section>
+            <!-- Start Date -->
+            <input
+              list="start-date"
+              name="start-date"
+              placeholder="Start Date"
+            />
+            <datalist id="start-date">
+              <!-- <input type="date" name="start-date" id="start-date" /> -->
+              <option value="Start Date"></option>
+            </datalist>
 
-       <section>
-         <Button>SEND REQUEST</Button>
-       </section>
+            <input type="text" name="text" id="text" />
+          </div>
+        </div>
+      </div>
 
+      <!-- Comment -->
+      <textarea
+        name="comment"
+        id="comment"
+        cols="30"
+        rows="10"
+        placeholder="Comments"
+        required
+      ></textarea>
+
+  
+    <!-- Add more input fields for other form elements -->
+  
+    <button type="button" onclick="previewForm()" class="send-btn">Send Request</button>
+  </form>
+
+  <script src="script.js"></script>
 </body>
 </html>
